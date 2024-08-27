@@ -1,0 +1,7 @@
+{
+  "version": "1.0",
+  "method": "POST",
+  "uri": "https://gql.reddit.com/",
+  "body": "{\"id\":\"db6eb1356b13\",\"variables\":{\"name\":\"userId\"}}",
+  "variables": ["userId"]
+}

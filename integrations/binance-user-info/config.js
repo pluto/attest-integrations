@@ -8,11 +8,10 @@
       const authCookie = cookies["p20t"];
       const csrfToken = cookies["cr00"];
       if (!authCookie || !csrfToken) {
-        return null;
+        return "";
       }
 
       // Minified MD5 from https://www.myersdaily.org/joseph/javascript/md5-text.html
-
       // prettier-ignore
       function _md5(a) {
         // kinda a hack to not format the whole md5 code block
@@ -20,14 +19,16 @@
         return md5(a);
       }
 
-      return {
-        clienttype: ["web"],
-        cookies: [{ p20t: cookies["p20t"].value }],
-        csrftoken: md5(cookies["cr00"].value),
-      };
+      return JSON.stringify({
+        clienttype: "web",
+        cookie: "p20t=" + cookies["p20t"].value + ";",
+        csrftoken: _md5(cookies["cr00"].value),
+        ["User-Agent"]:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+      });
     },
     getApiUrl: () =>
-      "https://www.binance.com/bapi/accounts/v1/private/account/user/base-detail",
+      "https://www.binance.com/bapi/composite/v2/private/pgc/user",
     getBody: function (code, doc, cookies) {
       return JSON.stringify({});
     },

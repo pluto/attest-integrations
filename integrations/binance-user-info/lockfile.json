@@ -1,0 +1,6 @@
+{
+  "version": "1.0",
+  "method": "POST",
+  "uri": "https://www.binance.com/bapi/accounts/v1/private/account/user/base-detail",
+  "body": "{}"
+}

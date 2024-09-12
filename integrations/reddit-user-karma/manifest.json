@@ -1,5 +1,5 @@
 {
-  "manifest_version": "1",
+  "manifestVersion": "1",
   "id": "reddit-user-karma",
   "title": "Total Reddit Karma",
   "description": "Generate a proof that you have a certain amount of karma",

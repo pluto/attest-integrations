@@ -1,5 +1,5 @@
 {
-  "manifest_version": "1",
+  "manifestVersion": "1",
   "id": "spotify-top-artists",
   "title": "Spotify Top Artists",
   "description": "Generate a proof that you have a certain top artist on Spotify",

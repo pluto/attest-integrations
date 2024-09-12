@@ -1,0 +1,7 @@
+{
+  "manifest_version": "1",
+  "id": "venmo-user-balance",
+  "title": "Venmo Balance",
+  "description": "integrations/venmo-user-balance/config.js",
+  "loginUrl": "https://venmo.com/account/sign-in"
+}

@@ -1,7 +1,0 @@
-{
-  "manifestVersion": "1",
-  "id": "spotify-top-artists",
-  "title": "Spotify Top Artists",
-  "description": "Generate a proof that you have a certain top artist on Spotify",
-  "loginUrl": "https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F__noul__%3Fl2l%3D1%26nd%3D1"
-}

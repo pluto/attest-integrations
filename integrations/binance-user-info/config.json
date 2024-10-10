@@ -1,0 +1,7 @@
+{
+  "manifestVersion": "1",
+  "id": "binance-user-info",
+  "title": "Binance User Info",
+  "description": "Get user info from Binance",
+  "loginUrl": "https://accounts.binance.com/en/login"
+}

@@ -55,6 +55,7 @@ function prepare(ctx, manifest) {
       manifest.request.set("userId", userId);
     }
 
+    manifest.appendDebugLog(manifest.request.get("body").variables.name);
     return (
       !manifest.request.get("body").variables.name.includes("<%") &&
       !!manifest.request.getHeader("Authorization")

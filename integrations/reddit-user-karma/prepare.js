@@ -56,7 +56,7 @@ function prepare(ctx, manifest) {
     }
 
     return (
-      !manifest.request.get("body").variabels.name.includes("<%") &&
+      !manifest.request.get("body").variables.name.includes("<%") &&
       !!manifest.request.getHeader("Authorization")
     );
   } catch (e) {

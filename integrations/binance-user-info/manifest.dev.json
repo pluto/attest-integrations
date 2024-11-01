@@ -9,15 +9,19 @@
     "method": "POST",
     "body": {},
     "headers": {
-      "clienttype": "web",
       "csrftoken": "<% csrftoken %>",
-      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome",
-      "Content-Type": "application/json",
       "cookie": "p20t=<% p20t %>"
     },
     "vars": {
       "csrftoken": {},
       "p20t": {}
+    },
+    "extra": {
+      "headers": {
+        "clienttype": "web",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome",
+        "Content-Type": "application/json"
+      }
     }
   },
   "response": {}

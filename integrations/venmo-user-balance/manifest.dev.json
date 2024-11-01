@@ -14,11 +14,15 @@
       "query": "query Identity($input: ProfileInput) {  profile(input: $input) {    ... on Profile {      identity {        ... on Identity {          balance {            userBalance {              value            }          }        }      }    }  }}"
     },
     "headers": {
-      "Content-Type": "application/json",
       "Authorization": "Bearer <% authToken %>"
     },
     "vars": {
       "authToken": {}
+    },
+    "extra": {
+      "headers": {
+        "Content-Type": "application/json"
+      }
     }
   },
   "response": {}

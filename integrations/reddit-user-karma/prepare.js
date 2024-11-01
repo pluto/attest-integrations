@@ -57,9 +57,6 @@ function prepare(ctx, manifest) {
 
     manifest.appendDebugLog(manifest.request.get("body").variables.name);
 
-    // Testing, remove after we verify it works.
-    manifest.request.extra.set("bar", "baz");
-
     return (
       !manifest.request.get("body").variables.name.includes("<%") &&
       !!manifest.request.getHeader("Authorization")

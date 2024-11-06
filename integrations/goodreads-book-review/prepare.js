@@ -9,7 +9,7 @@ function prepare(ctx, manifest) {
   const lcMain = cookies["lc-main"];
   const ubidMain = cookies["ubid-main"];
   const likelyHasAccount = cookies["likely_has_account"];
-  const blockingSignInInterstitial = cookies["blocking_sign_in_interstitial"];
+  // const blockingSignInInterstitial = cookies["blocking_sign_in_interstitial"];
   const sessionIdTime = cookies["session-id-time"];
   const JSESSIONID = cookies["JSESSIONID"];
   const sessionToken = cookies["session-token"];
@@ -31,8 +31,8 @@ function prepare(ctx, manifest) {
   manifest.appendDebugLog(JSON.stringify(ubidMain));
   manifest.appendDebugLog("likelyHasAccount");
   manifest.appendDebugLog(JSON.stringify(likelyHasAccount));
-  manifest.appendDebugLog("blockingSignInInterstitial");
-  manifest.appendDebugLog(JSON.stringify(blockingSignInInterstitial));
+  // manifest.appendDebugLog("blockingSignInInterstitial");
+  // manifest.appendDebugLog(JSON.stringify(blockingSignInInterstitial));
   manifest.appendDebugLog("sessionIdTime");
   manifest.appendDebugLog(JSON.stringify(sessionIdTime));
   manifest.appendDebugLog("JSESSIONID");
@@ -55,7 +55,7 @@ function prepare(ctx, manifest) {
     !lcMain ||
     !ubidMain ||
     !likelyHasAccount ||
-    !blockingSignInInterstitial ||
+    // !blockingSignInInterstitial ||
     !sessionIdTime ||
     !JSESSIONID ||
     !sessionToken ||
@@ -76,7 +76,7 @@ function prepare(ctx, manifest) {
     "lc-main=" + lcMain.value,
     "ubid-main=" + ubidMain.value,
     "likely_has_account=" + likelyHasAccount.value,
-    "blocking_sign_in_interstitial=" + blockingSignInInterstitial.value,
+    // "blocking_sign_in_interstitial=" + blockingSignInInterstitial.value,
     "session-id-time=" + sessionIdTime.value,
     "JSESSIONID=" + JSESSIONID.value,
     "session-token=" + sessionToken.value,

@@ -17,33 +17,33 @@ function prepare(ctx, manifest) {
   const sessAtMain = cookies["sess-at-main"];
   const sessionId2 = cookies["_session_id2"];
 
-  manifest.appendDebugLog(2);
-  manifest.appendDebugLog("ccsid");
-  manifest.appendDebugLog(JSON.stringify(ccsid));
-  manifest.appendDebugLog("locale");
-  manifest.appendDebugLog(JSON.stringify(locale));
-  manifest.appendDebugLog("sessionId");
-  manifest.appendDebugLog(JSON.stringify(sessionId));
-  manifest.appendDebugLog("lcMain");
-  manifest.appendDebugLog(JSON.stringify(lcMain));
-  manifest.appendDebugLog("ubidMain");
-  manifest.appendDebugLog(JSON.stringify(ubidMain));
-  manifest.appendDebugLog("likelyHasAccount");
-  manifest.appendDebugLog(JSON.stringify(likelyHasAccount));
-  manifest.appendDebugLog("sessionIdTime");
-  manifest.appendDebugLog(JSON.stringify(sessionIdTime));
-  manifest.appendDebugLog("JSESSIONID");
-  manifest.appendDebugLog(JSON.stringify(JSESSIONID));
-  manifest.appendDebugLog("sessionToken");
-  manifest.appendDebugLog(JSON.stringify(sessionToken));
-  manifest.appendDebugLog("xMain");
-  manifest.appendDebugLog(JSON.stringify(xMain));
-  manifest.appendDebugLog("atMain");
-  manifest.appendDebugLog(JSON.stringify(atMain));
-  manifest.appendDebugLog("sessAtMain");
-  manifest.appendDebugLog(JSON.stringify(sessAtMain));
-  manifest.appendDebugLog("sessionId2");
-  manifest.appendDebugLog(JSON.stringify(sessionId2));
+  // manifest.appendDebugLog(2);
+  // manifest.appendDebugLog("ccsid");
+  // manifest.appendDebugLog(JSON.stringify(ccsid));
+  // manifest.appendDebugLog("locale");
+  // manifest.appendDebugLog(JSON.stringify(locale));
+  // manifest.appendDebugLog("sessionId");
+  // manifest.appendDebugLog(JSON.stringify(sessionId));
+  // manifest.appendDebugLog("lcMain");
+  // manifest.appendDebugLog(JSON.stringify(lcMain));
+  // manifest.appendDebugLog("ubidMain");
+  // manifest.appendDebugLog(JSON.stringify(ubidMain));
+  // manifest.appendDebugLog("likelyHasAccount");
+  // manifest.appendDebugLog(JSON.stringify(likelyHasAccount));
+  // manifest.appendDebugLog("sessionIdTime");
+  // manifest.appendDebugLog(JSON.stringify(sessionIdTime));
+  // manifest.appendDebugLog("JSESSIONID");
+  // manifest.appendDebugLog(JSON.stringify(JSESSIONID));
+  // manifest.appendDebugLog("sessionToken");
+  // manifest.appendDebugLog(JSON.stringify(sessionToken));
+  // manifest.appendDebugLog("xMain");
+  // manifest.appendDebugLog(JSON.stringify(xMain));
+  // manifest.appendDebugLog("atMain");
+  // manifest.appendDebugLog(JSON.stringify(atMain));
+  // manifest.appendDebugLog("sessAtMain");
+  // manifest.appendDebugLog(JSON.stringify(sessAtMain));
+  // manifest.appendDebugLog("sessionId2");
+  // manifest.appendDebugLog(JSON.stringify(sessionId2));
 
   if (
     !ccsid ||
@@ -63,7 +63,7 @@ function prepare(ctx, manifest) {
     return false;
   }
 
-  manifest.appendDebugLog(3);
+  // manifest.appendDebugLog(3);
 
   const cookie = [
     "ccsid=" + ccsid.value,
@@ -81,10 +81,10 @@ function prepare(ctx, manifest) {
     "_session_id2=" + sessionId2.value,
   ].join("; ");
 
-  manifest.appendDebugLog(4);
+  // manifest.appendDebugLog(4);
 
   manifest.request.set("Cookie", cookie);
 
-  manifest.appendDebugLog(5);
+  // manifest.appendDebugLog(5);
   return true;
 }

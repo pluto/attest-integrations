@@ -14,5 +14,13 @@
       "accessToken": {}
     }
   },
-  "response": {}
+  "response": {
+    "status": "200",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "json": ["data", "me", "profile", "topArtists", "items"]
+    }
+  }
 }

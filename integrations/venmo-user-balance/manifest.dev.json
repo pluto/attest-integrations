@@ -25,5 +25,13 @@
       }
     }
   },
-  "response": {}
+  "response": {
+    "status": "200",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "json": ["data", "profile", "identity", "balance", "userBalance", "value"]
+    }
+  }
 }

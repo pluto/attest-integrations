@@ -22,5 +22,13 @@
       }
     }
   },
-  "response": {}
+  "response": {
+    "status": "200",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "json": ["data", "redditorInfoByName", "karma", "total"]
+    }
+  }
 }

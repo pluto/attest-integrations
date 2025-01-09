@@ -2,6 +2,6 @@
   "manifestVersion": "1",
   "id": "venmo-user-balance",
   "title": "Venmo Balance",
-  "description": "integrations/venmo-user-balance/config.js",
+  "description": "Generate a proof that you have a certain Venmo balance",
   "loginUrl": "https://venmo.com/account/sign-in"
 }

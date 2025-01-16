@@ -48,6 +48,20 @@ function prepare(ctx, manifest) {
           userId = mobileDrawer.getAttribute("href").split("/")[2];
         }
       }
+
+      // There is an even newer Reddit design for certain displays that
+      // removes user id from the drawer, and the only place we can now
+      // find it is the shadow dom, grab it from there
+      if (!userId) {
+        const navTimingCollector = doc.querySelector(
+          "shreddit-navtimings-collector"
+        );
+        if (navTimingCollector) {
+          userId = navTimingCollector.nextElementSibling.shadowRoot
+            .querySelector("rs-current-user")
+            .getAttribute("display-name");
+        }
+      }
     }
 
     // If userId is found, return it

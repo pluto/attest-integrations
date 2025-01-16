@@ -1,4 +1,4 @@
-function prepare(ctx, manifest) {
+async function prepare(ctx, manifest) {
   const cookies = ctx.cookies;
   const doc = ctx.doc;
 
@@ -53,14 +53,17 @@ function prepare(ctx, manifest) {
       // removes user id from the drawer, and the only place we can now
       // find it is the shadow dom, grab it from there
       if (!userId) {
-        const navTimingCollector = doc.querySelector(
-          "shreddit-navtimings-collector"
-        );
-        if (navTimingCollector) {
-          userId = navTimingCollector.nextElementSibling.shadowRoot
-            .querySelector("rs-current-user")
-            .getAttribute("display-name");
+        function extractDisplayName(htmlString) {
+          // This regex looks for display-name="someValue"
+          const match = htmlString.match(/display-name\s*=\s*"([^"]*)"/);
+          return match ? match[1] : null;
         }
+
+        userId = extractDisplayName(
+          await (
+            await fetch("https://www.reddit.com/svc/shreddit/reddit-chat")
+          ).text()
+        );
       }
     }
 

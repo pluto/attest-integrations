@@ -48,23 +48,6 @@ async function prepare(ctx, manifest) {
           userId = mobileDrawer.getAttribute("href").split("/")[2];
         }
       }
-
-      // There is an even newer Reddit design for certain displays that
-      // removes user id from the drawer, and the only place we can now
-      // find it is the shadow dom, grab it from there
-      if (!userId) {
-        function extractDisplayName(htmlString) {
-          // This regex looks for display-name="someValue"
-          const match = htmlString.match(/display-name\s*=\s*"([^"]*)"/);
-          return match ? match[1] : null;
-        }
-
-        userId = extractDisplayName(
-          await (
-            await fetch("https://www.reddit.com/svc/shreddit/reddit-chat")
-          ).text()
-        );
-      }
     }
 
     // If userId is found, return it

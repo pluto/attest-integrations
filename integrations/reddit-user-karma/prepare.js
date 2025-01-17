@@ -1,4 +1,4 @@
-async function prepare(ctx, manifest) {
+function prepare(ctx, manifest) {
   const cookies = ctx.cookies;
   const doc = ctx.doc;
 

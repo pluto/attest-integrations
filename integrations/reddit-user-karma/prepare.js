@@ -1,4 +1,6 @@
 function prepare(ctx, manifest) {
+  if (!manifest || !manifest.request) return false; 
+
   const cookies = ctx.cookies;
   const doc = ctx.doc;
 

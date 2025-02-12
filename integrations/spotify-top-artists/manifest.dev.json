@@ -20,7 +20,7 @@
       "Content-Type": "application/json"
     },
     "body": {
-      "json": ["data", "me", "profile", "topArtists", "items"]
+      "json": ["data", "me", "profile", "topArtists", "items", 0, "data", "profile", "name"]
     }
   }
 }

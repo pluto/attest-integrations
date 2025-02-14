@@ -2,6 +2,7 @@
   "manifestVersion": "3",
   "id": "venmo-user-balance",
   "title": "Venmo Balance",
+  "mode": "TLSN",
   "description": "Generate a proof that you have a certain Venmo balance",
   "prepareUrl": "https://venmo.com/account/sign-in",
   "request": {

@@ -1,7 +1,37 @@
 {
-  "manifestVersion": "1",
+  "manifestVersion": "3",
   "id": "venmo-user-balance",
   "title": "Venmo Balance",
   "description": "Generate a proof that you have a certain Venmo balance",
-  "loginUrl": "https://venmo.com/account/sign-in"
+  "prepareUrl": "https://venmo.com/account/sign-in",
+  "request": {
+    "url": "https://api.venmo.com/graphql",
+    "method": "POST",
+
+    "body": {
+      "operationName": "Identity",
+      "variables": {},
+      "query": "query Identity($input: ProfileInput) {  profile(input: $input) {    ... on Profile {      identity {        ... on Identity {          balance {            userBalance {              value            }          }        }      }    }  }}"
+    },
+    "headers": {
+      "Authorization": "Bearer <% authToken %>"
+    },
+    "vars": {
+      "authToken": {}
+    },
+    "extra": {
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": "200",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "json": ["data", "profile", "identity", "balance", "userBalance", "value"]
+    }
+  }
 }

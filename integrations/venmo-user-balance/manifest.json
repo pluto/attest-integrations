@@ -29,7 +29,7 @@
   "response": {
     "status": "200",
     "headers": {
-      "aontent-Type": "application/json"
+      "content-Type": "application/json"
     },
     "body": {
       "json": ["data", "profile", "identity", "balance", "userBalance", "value"]

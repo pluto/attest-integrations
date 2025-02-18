@@ -17,10 +17,20 @@
   "response": {
     "status": "200",
     "headers": {
-      "Content-Type": "application/json"
+      "content-type": "application/json"
     },
     "body": {
-      "json": ["data", "me", "profile", "topArtists", "items", 0, "data", "profile", "name"]
+      "json": [
+        "data",
+        "me",
+        "profile",
+        "topArtists",
+        "items",
+        0,
+        "data",
+        "profile",
+        "name"
+      ]
     }
   }
 }

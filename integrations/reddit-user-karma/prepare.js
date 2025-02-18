@@ -19,7 +19,7 @@ function prepare(ctx, manifest) {
 
     return (
       !manifest.request.get("body").variables.name.includes("<%") &&
-      !!manifest.request.getHeader("Authorization")
+      !!manifest.request.getHeader("authorization")
     );
   } catch (e) {
     console.error("Error in getBody:", e);

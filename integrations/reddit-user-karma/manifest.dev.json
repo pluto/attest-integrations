@@ -14,7 +14,7 @@
       }
     },
     "headers": {
-      "Authorization": "Bearer <% authToken %>"
+      "authorization": "Bearer <% authToken %>"
     },
     "vars": {
       "userId": {},

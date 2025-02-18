@@ -15,7 +15,7 @@
       "query": "query Identity($input: ProfileInput) {  profile(input: $input) {    ... on Profile {      identity {        ... on Identity {          balance {            userBalance {              value            }          }        }      }    }  }}"
     },
     "headers": {
-      "Authorization": "Bearer <% authToken %>"
+      "authorization": "Bearer <% authToken %>"
     },
     "vars": {
       "authToken": {}
@@ -29,7 +29,7 @@
   "response": {
     "status": "200",
     "headers": {
-      "Content-Type": "application/json"
+      "aontent-Type": "application/json"
     },
     "body": {
       "json": ["data", "profile", "identity", "balance", "userBalance", "value"]

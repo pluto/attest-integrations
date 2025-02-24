@@ -27,7 +27,7 @@
   "response": {
     "status": "200",
     "headers": {
-      "content-type": "application/json"
+      "Content-Type": "application/json"
     },
     "body": {
       "json": ["data", "badge"]

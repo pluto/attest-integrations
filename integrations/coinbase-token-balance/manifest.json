@@ -7,6 +7,7 @@
   "request": {
     "url": "https://www.coinbase.com/graphql/query?&operationName=BuySellModalDepsQuery&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%223041b2af1a5794541a4ec913278f5b35b4393dcba9b731ceb6994d92b1dc61b0%22%7D%7D&variables=%7B%22assetUuid%22%3A%22%22%2C%22assetSlug%22%3A%22%22%2C%22assetSymbol%22%3A%22%22%2C%22nativeCurrency%22%3A%22USD%22%2C%22skipAssetSlug%22%3Atrue%2C%22skipAssetSymbol%22%3Atrue%2C%22skipAssetUuid%22%3Atrue%2C%22shouldIncludeBalanceSummaryInfo%22%3Atrue%2C%22includeAutoStakingCheck%22%3Atrue%2C%22targetAssetSlug%22%3A%22%22%2C%22skipBrokerageProduct%22%3Atrue%2C%22skipTargetAssetSlug%22%3Atrue%2C%22includeStablecoinCashEquivalentAssets%22%3Afalse%2C%22includeDefaultPaymentMethodForBuy%22%3Afalse%2C%22skipAccountHistory%22%3Atrue%2C%22includeDefaultPaymentMethodForSell%22%3Atrue%2C%22applePayEnabled%22%3Afalse%2C%22includeEligibleIncomeVerification%22%3Afalse%7D",
     "method": "GET",
+    "body": {},
     "headers": {
       "Cookie": "unified-session-manager-cookie=<% cookie %>"
     },

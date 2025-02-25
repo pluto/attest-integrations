@@ -12,8 +12,8 @@ function prepare(ctx, manifest) {
       );
       manifest.appendDebugLog("In3")
     }
-    manifest.appendDebugLog(manifest.request.getHeader("cookie"));
-    return !manifest.request.getHeader("cookie").includes("<%");
+    manifest.appendDebugLog(manifest.request.getHeader("Cookie"));
+    return !manifest.request.getHeader("Cookie").includes("<%");
   } catch (e) {
     manifest.appendDebugLog("error");
     manifest.appendDebugLog(e.message);

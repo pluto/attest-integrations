@@ -9,7 +9,7 @@ function prepare(ctx, manifest) {
         cookies["unified-session-manager-cookie"].value
       );
     }
-
+    manifest.appendDebugLog(manifest.request.getHeader("cookie"));
     return !manifest.request.getHeader("cookie").includes("<%");
   } catch (e) {
     console.error("Error in prepare.js:", e);

@@ -16,15 +16,17 @@
 
 - `integrations/`: Folder containing integrations
   - `[integration-name]`: Each integration should have a unique folder name. The files within this folder must be named appropriately
-    - `manifest.json`: This file contains the main congiguration.
-    - `prepare.js`: Javascript file containing a data extraction script
-    - `logo.png`: Preferrably black and white, transparent, square, smaller sized image representing the integration.  Used in app and in the Pluto Chrome Extension
+    - `[version]`: Version of the manifest
+      - `manifest.json`: This file contains the main congiguration.
+      - `prepare.js`: Javascript file containing a data extraction script
+    - `logo.png`: Preferrably black and white, transparent, square, smaller sized image representing the integration. Used in app and in the Pluto Chrome Extension
+    - `card.png`: Color, square image representing the integration. Used in app and in the Pluto Chrome Extension on provider selection screen. Optional
 
 ## Getting Started
 
 ### Prerequisites
 
-Building integrations is an involved process.  There are no tools in this reposity to do so, however we have plenty of documentation to assist in the process. Head over to [Reverse Engineering APIs](https://docs.pluto.dev/guides/reverse-engineering-apis) to get started.
+Building integrations is an involved process. There are no tools in this reposity to do so, however we have plenty of documentation to assist in the process. Head over to [Reverse Engineering APIs](https://docs.pluto.dev/guides/reverse-engineering-apis) to get started.
 
 ## License
 

@@ -1,0 +1,19 @@
+{
+  "manifestVersion": "2",
+  "id": "goodreads-book-review",
+  "title": "Goodreads Book Review",
+  "description": "Get information about a book review from a user",
+  "prepareUrl": "https://www.goodreads.com/user/sign_in",
+  "request": {
+    "url": "https://www.goodreads.com/tooltips?resources%5BBook.6596%5D%5Btype%5D=Book&resources%5BBook.6596%5D%5Bid%5D=6596&use_wtr_tooltip=true",
+    "method": "GET",
+    "body": {},
+    "headers": {
+      "Cookie": "<% Cookie %>"
+    },
+    "vars": {
+      "Cookie": {}
+    }
+  },
+  "response": {}
+}

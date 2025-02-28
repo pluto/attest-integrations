@@ -1,5 +1,0 @@
-{
-  "method": "POST",
-  "uri": "https://api.venmo.com/graphql",
-  "body": "{\"operationName\":\"Identity\",\"variables\":{},\"query\":\"query Identity($input: ProfileInput) {  profile(input: $input) {    ... on Profile {      identity {        ... on Identity {          balance {            userBalance {              value            }          }        }      }    }  }}\"}"
-}

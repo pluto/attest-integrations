@@ -1,9 +1,0 @@
-{
-  "manifestVersion": "2",
-  "id": "amazon-purchase-history",
-  "title": "Amazon Purchase History",
-  "description": "Get user's purchase history from Amazon",
-  "prepareUrl": "https://www.amazon.com/ap/signin?openid.pape.max_auth_age=900&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
-  "request": {},
-  "response": {}
-}

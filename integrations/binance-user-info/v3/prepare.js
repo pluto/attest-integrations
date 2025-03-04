@@ -1,8 +1,5 @@
-function request(ctx, req) {
+function prepare(ctx, manifest) {
   const cookies = ctx.cookies;
-
-  req.setUrl("https://www.binance.com/bapi/composite/v2/private/pgc/user");
-  req.setBody({});
 
   const authCookie = cookies["p20t"];
   const csrfToken = cookies["cr00"];
@@ -18,15 +15,8 @@ function request(ctx, req) {
     return md5(a);
   }
 
-  req.setHeader("clienttype", "web");
-  req.setHeader("csrftoken", _md5(cookies["cr00"].value));
-  req.setHeader(
-    "User-Agent",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome"
-  );
-  req.setHeader("Content-Type", "application/json");
-  req.setCookie("p20t", cookies["p20t"].value);
-  req.setMethod("POST");
+  manifest.request.set("csrftoken", _md5(cookies["cr00"].value));
+  manifest.request.set("p20t", cookies["p20t"].value);
 
   return true;
 }

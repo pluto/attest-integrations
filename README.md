@@ -10,7 +10,7 @@
 
 ## Overview
 
-`attest-integrations` is a project that provides integrations for to create web proofs with Pluto.
+`attest-integrations` is a project that provides integrations for creating web proofs with Pluto.
 
 ## Repository Structure
 

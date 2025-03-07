@@ -1,0 +1,34 @@
+{
+  "manifestVersion": "3",
+  "id": "linkedin-account-ownership",
+  "title": "LinkedIn Account Ownership",
+  "description": "Generate a proof that you own a LinkedIn account",
+  "prepareUrl": "https://www.linkedin.com/login",
+  "request": {
+    "url": "https://www.linkedin.com/mysettings-api/settingsApiMiniProfile",
+    "method": "GET",
+    "headers": {
+      "csrf-token": "<% csrfToken %>",
+      "Cookie": "li_at=<% authToken %>; JSESSIONID=<% csrfToken %>"
+    },
+    "vars": {
+      "csrfToken": {},
+      "authToken": {}
+    },
+    "extra": {
+      "headers": {
+        "Content-Type": "application/json",
+        "x-restli-protocol-version": "2.0.0"
+      }
+    }
+  },
+  "response": {
+    "status": "200",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "json": ["url"]
+    }
+  }
+}

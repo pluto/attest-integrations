@@ -1,0 +1,34 @@
+{
+  "manifestVersion": "3",
+  "id": "twitter-account-ownership",
+  "title": "Twitter Account Ownership",
+  "description": "Generate a proof that you own a Twitter account",
+  "prepareUrl": "https://x.com/i/flow/login",
+  "request": {
+    "url": "https://x.com/i/api/2/badge_count/badge_count.json?supports_ntab_urt=1",
+    "method": "GET",
+    "headers": {
+      "authorization": "Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA",
+      "x-csrf-token": "<% csrfToken %>",
+      "Cookie": "auth_token=<% authToken %>; ct0=<% csrfToken %>;"
+    },
+    "vars": {
+      "csrfToken": {},
+      "authToken": {}
+    },
+    "extra": {
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": "200",
+    "headers": {
+      "content-Type": "application/json"
+    },
+    "body": {
+      "json": ["total_unread_count"]
+    }
+  }
+}

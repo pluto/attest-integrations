@@ -4,8 +4,12 @@ function prepare(ctx, manifest) {
   try {
     if (cookies["JSESSIONID"]) {
       manifest.request.set(
-        "csrfToken",
+        "strippedCsrfToken",
         cookies["JSESSIONID"].value.replaceAll('"', "")
+      );
+      manifest.request.set(
+        "csrfToken",
+        encodeURIComponent(cookies["JSESSIONID"].value)
       );
     }
 

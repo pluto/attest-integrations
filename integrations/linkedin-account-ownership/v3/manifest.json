@@ -8,10 +8,11 @@
     "url": "https://www.linkedin.com/mysettings-api/settingsApiMiniProfile",
     "method": "GET",
     "headers": {
-      "csrf-token": "<% csrfToken %>",
+      "csrf-token": "<% strippedCsrfToken %>",
       "Cookie": "li_at=<% authToken %>; JSESSIONID=\\\"<% csrfToken %>\\\";"
     },
     "vars": {
+      "strippedCsrfToken": {},
       "csrfToken": {},
       "authToken": {}
     },

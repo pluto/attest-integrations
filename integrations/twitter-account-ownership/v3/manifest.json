@@ -25,7 +25,7 @@
   "response": {
     "status": "200",
     "headers": {
-      "content-Type": "application/json"
+      "Content-Type": "application/json"
     },
     "body": {
       "json": ["total_unread_count"]

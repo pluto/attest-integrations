@@ -9,7 +9,7 @@ function prepare(ctx, manifest) {
       );
       manifest.request.set(
         "csrfToken",
-        encodeURIComponent(cookies["JSESSIONID"].value)
+        cookies["JSESSIONID"].value.replaceAll('"', "")
       );
     }
 
